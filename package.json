@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
     "start": "node app.js"
   },
   "author": "@andymbryant",
@@ -15,7 +15,11 @@
     "express": "^4.17.1",
     "express-mongo-sanitize": "^2.0.0",
     "helmet": "^3.23.3",
+    "http-errors": "^1.7.3",
     "mongoose": "^5.9.20",
     "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
