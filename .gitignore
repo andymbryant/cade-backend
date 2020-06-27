@@ -9,4 +9,4 @@ yarn-error.log
 
 # Environment varibales
 .env*
-!.env*.example
+.deployment*

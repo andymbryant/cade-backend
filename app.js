@@ -3,6 +3,12 @@ const helmet = require('helmet');
 const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv')
+
+// Enable local env files
+dotenv.config()
+
 const apiRouter = require('./routes/api.js');
 
 const app = express()
@@ -17,10 +23,6 @@ app.use(mongoSanitize());
 
 // Enable gzip compression
 app.use(compression());
-
-// Enable CORS
-app.use(cors());
-app.options('*', cors());
 
 app.use('/api', apiRouter)
 
